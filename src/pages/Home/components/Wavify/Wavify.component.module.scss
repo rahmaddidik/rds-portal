@@ -1,0 +1,18 @@
+@import '../../../../../styles/theme';
+
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+
+  @media #{$phone} {
+    height: 35vh;
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 2rem;
+
+  @media #{$tablet} {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.content {
+  background-color: transparentize($color: $darkLight, $amount: 0.75);
+  border-radius: $radius-default;
+  padding: 1.5rem;
+  color: $white;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 2rem;
+
+  @media #{$phone} {
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    margin-top: 0;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+}
+
+.info {
+  display: grid;
+  justify-items: baseline;
+  align-content: baseline;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  align-content: center;
+  gap: 1rem;
+
+  @media #{$phone} {
+    grid-template-columns: repeat(auto-fill, 48px);
+  }
+}

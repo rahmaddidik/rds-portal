@@ -1,0 +1,41 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: grid;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.half {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+
+  @media #{$phone} {
+    grid-auto-flow: row;
+  }
+}
+
+.inputText {
+  border-radius: $radius-default;
+  height: 3rem;
+  border: none;
+  outline: none;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  font-family: $font-family;
+  width: 100%;
+}
+
+.inputTextarea {
+  @extend .inputText;
+  padding: 1rem 1.5rem;
+  line-height: 1.5;
+  height: auto;
+}
+
+.action {
+  justify-self: baseline;
+}

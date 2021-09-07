@@ -1,0 +1,21 @@
+@import '../../../styles/theme';
+
+.container {
+  display: grid;
+  align-content: start;
+  gap: 5vh;
+  margin-bottom: 5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 3rem;
+
+  @media #{$desktop} {
+    grid-template-columns: 0.65fr 1fr;
+  }
+  @media #{$tablet} {
+    grid-template-columns: 1fr;
+  }
+}

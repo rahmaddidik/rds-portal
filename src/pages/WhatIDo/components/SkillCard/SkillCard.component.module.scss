@@ -1,0 +1,24 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  text-align: center;
+  background-color: transparentize($color: $darkLight, $amount: 0.75);
+  padding:  3rem 1.5rem;
+  border-radius: $radius-default;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-weight: 300;
+  line-height: 1.5;
+  color: $grey;
+}

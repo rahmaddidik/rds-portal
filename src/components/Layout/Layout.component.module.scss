@@ -1,0 +1,23 @@
+@import '../../../styles/theme';
+
+.container {
+  min-height: 100vh;
+  position: relative;
+  padding-left: 9rem;
+  padding-right: 2rem;
+  display: grid;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-content: baseline;
+
+  @media #{$widescreen} {
+    padding-left: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+.containerMobile {
+  @extend .container;
+  padding: 0 1rem 10vh 1rem;
+}

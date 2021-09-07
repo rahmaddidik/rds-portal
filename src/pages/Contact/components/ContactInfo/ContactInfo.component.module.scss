@@ -1,0 +1,42 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: grid;
+  position: relative;
+  gap: 0.5rem;
+  color: $white;
+  align-content: baseline;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.description {
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+
+  span {
+    color: $info;
+    transition: color ease 0.5s;
+    cursor: pointer;
+    font-weight: 400;
+
+    &:hover {
+      color: $warning;
+    }
+  }
+}
+
+.maps {
+  position: absolute;
+  top: 2rem;
+
+  svg {
+    zoom: 2;
+  }
+}

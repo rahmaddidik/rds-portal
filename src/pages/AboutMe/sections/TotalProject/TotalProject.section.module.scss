@@ -1,0 +1,13 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+  row-gap: 2rem;
+  margin: 3rem 0;
+
+  @media #{$tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

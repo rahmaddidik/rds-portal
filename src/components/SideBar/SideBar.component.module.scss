@@ -1,0 +1,73 @@
+@import '../../../styles/theme';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-default;
+  background-color: transparentize($color: $darkLight, $amount: 0.25);
+  width: 6rem;
+  position: fixed;
+  height: calc(100vh - 2rem);
+  margin: 1rem;
+  color: $grey;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  margin: 1rem 0;
+}
+
+.menu {
+  display: grid;
+  width: 100%;
+  row-gap: 2rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  height: max-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &Item {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform cubic-bezier(0.47, 2.75, 0.41, 0.8) 0.25s,
+      color ease 0.25s;
+
+    &:hover,
+    &:focus {
+      color: $warning;
+      transform: scale(1.25);
+    }
+
+    &Active {
+      @extend .menuItem;
+      color: $warning;
+      pointer-events: none;
+
+      &:hover {
+        transform: scale(1) !important;
+      }
+    }
+  }
+}
+
+.copyright {
+  transform: rotate(-90deg);
+  position: absolute;
+  bottom: 6rem;
+  margin: auto;
+  width: max-content;
+
+  @media (max-height: 680px) {
+    display: none;
+  }
+}

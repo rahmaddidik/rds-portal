@@ -1,0 +1,21 @@
+@import '../../../../../styles/theme';
+
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    min-width: 1024px;
+    height: 75%;
+    overflow: visible;
+  }
+
+  @media #{$phone} {
+    height: 65vh;
+  }
+}

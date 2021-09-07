@@ -1,0 +1,11 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media #{$phone} {
+    grid-template-columns: 1fr;
+  }
+}

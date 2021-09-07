@@ -1,0 +1,41 @@
+@import '../../../styles/theme';
+
+.container {
+  display: grid;
+  grid-auto-flow: column;
+  background-color: $darkLight;
+  width: calc(100vw - 2rem);
+  height: 56px;
+  border-radius: $radius-bottombar;
+  position: fixed;
+  margin: 1rem;
+  color: $grey;
+  z-index: 10;
+  bottom: 0;
+  box-shadow: 0 6px 24px -2px transparentize($color: $dark, $amount: 0.5);
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 22px;
+
+  &:focus {
+    color: $warning;
+  }
+
+  small {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0.15rem;
+    margin-bottom: -0.25rem;
+  }
+}
+
+.menuItemActive {
+  @extend .menuItem;
+  color: $warning;
+}

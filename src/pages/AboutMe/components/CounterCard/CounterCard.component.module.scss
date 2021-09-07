@@ -1,0 +1,26 @@
+@import '../../../../../styles/theme';
+
+.container {
+  display: grid;
+  grid-template-areas: 'ICON COUNT' 'ICON TEXT';
+  grid-template-columns: 3rem 1fr;
+  color: $white;
+}
+
+.icon {
+  grid-area: ICON;
+  font-size: 2.5rem;
+  color: $grey;
+}
+
+.count {
+  grid-area: COUNT;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text {
+  grid-area: TEXT;
+  color: $grey;
+  font-weight: 300;
+}

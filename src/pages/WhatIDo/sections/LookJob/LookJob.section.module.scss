@@ -1,0 +1,20 @@
+@import '../../../../../styles/theme';
+
+.container {
+  width: 100%;
+  text-align: center;
+  color: $grey;
+  font-weight: 300;
+  padding: 2rem 0;
+
+  span {
+    color: $info;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color ease 0.5s;
+
+    &:hover {
+      color: $warning;
+    }
+  }
+}
