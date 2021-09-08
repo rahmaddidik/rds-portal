@@ -1,9 +1,9 @@
 //#region IMPORT
 import {
-  IoLogoInstagram,
+  IoLogoDribbble,
+  IoLogoGithub,
   IoLogoLinkedin,
   IoLogoYoutube,
-  IoMail,
 } from 'react-icons/io5';
 import Image from 'next/image';
 import { Button } from '..';
@@ -67,15 +67,15 @@ export const Profile: React.FC<Props> = ({ isSimple }: Props) => {
             >
               <div
                 className={styles.mediaItem}
-                onClick={() => externalLink(PATH.EMAIL)}
+                onClick={() => externalLink(PATH.GITHUB)}
               >
-                <IoMail />
+                <IoLogoGithub />
               </div>
               <div
                 className={styles.mediaItem}
-                onClick={() => externalLink(PATH.INSTAGRAM)}
+                onClick={() => externalLink(PATH.DRIBBBLE)}
               >
-                <IoLogoInstagram />
+                <IoLogoDribbble />
               </div>
               <div
                 className={styles.mediaItem}

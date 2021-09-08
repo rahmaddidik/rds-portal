@@ -3,6 +3,7 @@ import { BottomBar, SideBar } from '..';
 import AOS from 'aos';
 import styles from './Layout.component.module.scss';
 import { useWindowSize } from '../../utils';
+import Head from 'next/head';
 
 export const Layout: React.FC = ({ children }) => {
   const size = useWindowSize();
@@ -14,6 +15,9 @@ export const Layout: React.FC = ({ children }) => {
   });
   return (
     <>
+      <Head>
+        <title>RDS PORTAL</title>
+      </Head>
       {isMobile ? <BottomBar /> : <SideBar />}
       <main className={isMobile ? styles.containerMobile : styles.container}>
         {children}
