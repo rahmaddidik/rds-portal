@@ -23,12 +23,20 @@
   height: 100%;
   font-size: 22px;
 
-  &:focus {
+  svg {
+    transition: transform cubic-bezier(0.5, 2, 0.75, 0.8) 0.25s, color ease 0.5s;
+  }
+
+  &:active {
     color: $warning;
+
+    svg {
+      transform: scale(1.25);
+    }
   }
 
   small {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
     margin-top: 0.15rem;
     margin-bottom: -0.25rem;

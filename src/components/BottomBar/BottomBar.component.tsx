@@ -49,7 +49,7 @@ export const BottomBar: React.FC = () => {
           }
         >
           <IoBriefcase title="What I Do?" />
-          <small>Waht I Do</small>
+          <small>What I Do</small>
         </div>
       </Link>
       <Link href="/work">
