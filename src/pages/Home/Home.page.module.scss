@@ -14,11 +14,22 @@
   align-items: center;
   cursor: pointer;
 
+  &:hover {
+    span {
+      color: $warning;
+    }
+
+    svg {
+      stroke: $warning !important;
+    }
+  }
+
   span {
     font-size: 12px;
     color: $white;
     margin-top: 0.5rem;
     letter-spacing: 0.1rem;
+    transition: color ease 0.5s;
   }
 
   @media #{$phone} {

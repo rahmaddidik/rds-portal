@@ -12,8 +12,8 @@ export const Background: React.FC = () => {
     document.querySelectorAll('#IconBackground path').forEach((layer) => {
       const data = layer.getAttribute('data-speed');
       const speed = parseInt(data || '1');
-      const positionX = (x * speed) / 200;
-      const positionY = (y * speed) / 200;
+      const positionX = (layer.clientWidth - x * speed) / 150;
+      const positionY = (layer.clientHeight - y * speed) / 150;
 
       layer.setAttribute('transform', `translate(${positionX}, ${positionY})`);
     });
