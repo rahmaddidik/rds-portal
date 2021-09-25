@@ -8,6 +8,7 @@ export const Work: React.FC = () => {
   return (
     <div className={styles.container}>
       <TitlePage text="Recent Works" />
+      <div>Test</div>
     </div>
   );
 };
