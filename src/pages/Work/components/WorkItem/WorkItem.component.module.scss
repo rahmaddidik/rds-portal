@@ -1,0 +1,73 @@
+@import '../../../../../styles/theme';
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  max-height: 300px;
+  border-radius: $radius-default;
+  cursor: pointer;
+  transition: box-shadow ease 0.5s;
+  background-color: $white;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $overflow;
+    opacity: 0;
+    transition: opacity ease 0.5s;
+  }
+
+  img {
+    object-fit: cover;
+    transition: transform ease 0.5s;
+    transform: scale(1.01);
+  }
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba($color: $black, $alpha: 0.5);
+
+    &::after {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1.05);
+    }
+    .title {
+      opacity: 1;
+    }
+  }
+}
+
+.title {
+  opacity: 0;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  z-index: 1;
+  transition: opacity ease 0.5s;
+  color: $white;
+  font-size: 18px;
+}
+
+.icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  color: $info;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-circle;
+  background-color: transparentize($color: $white, $amount: 0.25);
+  box-shadow: 0 2px 4px rgba($color: $black, $alpha: 0.15);
+}

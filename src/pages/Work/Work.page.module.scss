@@ -1,0 +1,12 @@
+@import '../../../styles/theme';
+
+.tabContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 1rem 0;
+
+  @media #{$phone} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

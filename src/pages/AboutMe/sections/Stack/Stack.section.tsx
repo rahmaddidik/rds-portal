@@ -37,7 +37,9 @@ export const Stack: React.FC = () => {
             the company profile, support big company product until government
             projects.
           </p>
-          <Button text="Download CV" />
+          <a className={styles.button} download href="cv_rahmad_didik.pdf">
+            Download CV
+          </a>
         </div>
         <div
           data-aos="fade-left"

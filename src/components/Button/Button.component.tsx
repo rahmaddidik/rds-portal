@@ -9,6 +9,7 @@ export interface Props {
   className?: string;
   onClick?(): void;
   to?: string;
+  download?: boolean;
 }
 //#endregion
 

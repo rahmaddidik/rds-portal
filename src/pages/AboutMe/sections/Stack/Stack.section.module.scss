@@ -47,3 +47,21 @@
     grid-template-columns: repeat(auto-fill, 48px);
   }
 }
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 1.5rem;
+  background-color: $info;
+  min-width: 9rem;
+  color: $white;
+  cursor: pointer;
+  transition: background ease 0.5s;
+
+  &:hover {
+    background-color: darken($color: $info, $amount: 2.5);
+  }
+}
