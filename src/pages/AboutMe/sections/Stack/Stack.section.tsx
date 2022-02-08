@@ -10,7 +10,7 @@ import {
   IconSketch,
   IconWebpack,
 } from '../../../../assets/icons';
-import { Button, Profile } from '../../../../components';
+import { Profile } from '../../../../components';
 import styles from './Stack.section.module.scss';
 //#endregion
 
