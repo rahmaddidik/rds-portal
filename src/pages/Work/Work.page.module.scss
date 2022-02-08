@@ -6,7 +6,12 @@
   gap: 3rem;
   padding: 1rem 0;
 
-  @media #{$phone} {
+  @media #{$tablet} {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$phone} {
+    grid-template-columns: 1fr;
+    padding-bottom: 3rem;
   }
 }
