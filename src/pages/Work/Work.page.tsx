@@ -53,8 +53,33 @@ export const Work: React.FC = () => {
           <>
             <WorkItem
               type={TabItem.UXE}
+              src="/recent_works/theking.jpg"
+              title="e Course Promo"
+            />
+            <WorkItem
+              type={TabItem.UXE}
               src="/recent_works/portfolio.jpg"
               title="Portfolio"
+            />
+            <WorkItem
+              type={TabItem.UXE}
+              src="/recent_works/edupower.jpg"
+              title="E-Learning"
+            />
+            <WorkItem
+              type={TabItem.UXE}
+              src="/recent_works/nvivo.jpg"
+              title="Nvivo Course"
+            />
+            <WorkItem
+              type={TabItem.UXE}
+              src="/recent_works/taman_pintar.jpg"
+              title="Taman Pintar YK"
+            />
+            <WorkItem
+              type={TabItem.UXE}
+              src="/recent_works/al_azhar.jpg"
+              title="Al Azhar YK"
             />
           </>
         )}
