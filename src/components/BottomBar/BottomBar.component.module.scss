@@ -13,6 +13,7 @@
   z-index: 10;
   bottom: 0;
   box-shadow: 0 6px 24px -2px transparentize($color: $dark, $amount: 0.5);
+  z-index: 100;
 }
 
 .menuItem {
