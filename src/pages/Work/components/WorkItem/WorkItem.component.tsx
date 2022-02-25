@@ -1,6 +1,7 @@
 //#region IMPORT
 import Image from 'next/image';
 import { useState } from 'react';
+import ReactGA from 'react-ga4';
 import { IoGlobe, IoImages, IoVideocam, IoImage } from 'react-icons/io5';
 import Skeleton from 'react-loading-skeleton';
 import { TabItem } from '../../constants';
@@ -11,8 +12,8 @@ import styles from './WorkItem.component.module.scss';
 interface Props {
   type: TabItem;
   src: string;
-  title?: string;
-  link?: string;
+  title: string;
+  link: string;
 }
 //#endregion
 
@@ -25,6 +26,11 @@ export const WorkItem: React.FC<Props> = ({
 }: Props) => {
   const redirect = () => {
     window.open(link, '_blank');
+    ReactGA.event({
+      category: 'RECENT WORK',
+      label: link,
+      action: (type as keyof typeof TabItem) + ' - ' + title,
+    });
   };
 
   const [loaded, setLoaded] = useState(true);

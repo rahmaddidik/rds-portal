@@ -1,5 +1,6 @@
 //#region IMPORT
 import { useState } from 'react';
+import ReactGA from 'react-ga4';
 import { TitlePage } from '../../components';
 import { WorkItem, WorkTab } from './components';
 import { TabItem } from './constants';
@@ -11,10 +12,19 @@ import styles from './Work.page.module.scss';
 export const Work: React.FC = () => {
   const [active, setActive] = useState(TabItem.UID);
 
+  const toggleTab = (value: TabItem) => {
+    setActive(value);
+    ReactGA.event({
+      category: 'RECENT WORK TABS',
+      label: value,
+      action: value,
+    });
+  };
+
   return (
     <div className={styles.container}>
       <TitlePage text="Recent Works" />
-      <WorkTab activeMenu={active} onClick={(value) => setActive(value)} />
+      <WorkTab activeMenu={active} onClick={(value) => toggleTab(value)} />
       <div className={styles.tabContent}>
         {active === TabItem.UID && (
           <>

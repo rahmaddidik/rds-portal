@@ -1,4 +1,5 @@
 //#region IMPORT
+import ReactGA from 'react-ga4';
 import {
   IconCSS3,
   IconFigma,
@@ -37,7 +38,18 @@ export const Stack: React.FC = () => {
             the company profile, support big company product until government
             projects.
           </p>
-          <a className={styles.button} download href="cv_rahmad_didik.pdf">
+          <a
+            className={styles.button}
+            download
+            href="cv_rahmad_didik.pdf"
+            onMouseUp={() => {
+              ReactGA.event({
+                category: 'BUTTON',
+                label: 'Download CV',
+                action: 'Download CV',
+              });
+            }}
+          >
             Download CV
           </a>
         </div>

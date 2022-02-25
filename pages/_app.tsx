@@ -5,12 +5,14 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { Layout } from '../src/components';
 import 'aos/src/sass/aos.scss';
+import { useRouter } from 'next/router';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
   useEffect(() => {
     hotjar.initialize(2849027, 6);
     ReactGA.initialize('G-TH4LW9Q0HB');
-    ReactGA.send('pageview');
+    ReactGA.send({ hitType: 'pageview', page: router.pathname });
   }, []);
 
   return (
