@@ -33,6 +33,7 @@
     "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "2.3.2",
+    "react-hotjar": "^5.0.0",
     "react-icons": "^4.2.0",
     "react-loading-skeleton": "^3.0.3",
     "typescript": "4.4.2"
