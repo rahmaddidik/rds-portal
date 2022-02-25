@@ -1,0 +1,110 @@
+[
+    {
+        "type": "UID",
+        "image_url": "/recent_works/jawilen.jpg",
+        "link_url": "https://dribbble.com/shots/16662491-Tour-Guide-App",
+        "title": "Tour Guide App"
+    },
+    {
+        "type": "UID",
+        "image_url": "/recent_works/theking.jpg",
+        "link_url": "https://dribbble.com/shots/16662470-eCource-Promotion",
+        "title": "e Course Promo"
+    },
+    {
+        "type": "UID",
+        "image_url": "/recent_works/portfolio.jpg",
+        "link_url": "https://dribbble.com/shots/16662325-UI-Portfolio",
+        "title": "Portfolio"
+    },
+    {
+        "type": "UID",
+        "image_url": "/recent_works/jenius_app.jpg",
+        "link_url": "https://dribbble.com/shots/16744254-Jenius-Mobile-App",
+        "title": "Jenius App"
+    },
+    {
+        "type": "UID",
+        "image_url": "/recent_works/rskia_sadewa.jpg",
+        "link_url": "https://dribbble.com/shots/16763938-RSKIA-Sadewa-Web-Portal",
+        "title": "RSKIA Sadewa"
+    },
+    {
+        "type": "UID",
+        "image_url": "/recent_works/restaurant.jpg",
+        "link_url": "https://dribbble.com/shots/16767332-Restaurant-Web-Promotion",
+        "title": "Restaurant Portal"
+    },
+    {
+        "type": "UXE",
+        "image_url": "/recent_works/theking.jpg",
+        "link_url": "https://bimbeltheking.com/",
+        "title": "e Cource Promo"
+    },
+    {
+        "type": "UXE",
+        "image_url": "/recent_works/portfolio.jpg",
+        "link_url": "https://rahmaddidik.com/",
+        "title": "Portfolio"
+    },
+    {
+        "type": "UXE",
+        "image_url": "/recent_works/edupower.jpg",
+        "link_url": "https://edupower.id/",
+        "title": "E-Learning"
+    },
+    {
+        "type": "UXE",
+        "image_url": "/recent_works/nvivo.jpg",
+        "link_url": "https://pusatpelatihannvivo.id/",
+        "title": "Nvivo Course"
+    },
+    {
+        "type": "UXE",
+        "image_url": "/recent_works/taman_pintar.jpg",
+        "link_url": "https://tamanpintar.co.id/",
+        "title": "Taman Pintar YK"
+    },
+    {
+        "type": "UXE",
+        "image_url": "/recent_works/al_azhar.jpg",
+        "link_url": "https://www.alazhar-yogyakarta.com/",
+        "title": "Al Azhar YK"
+    },
+    {
+        "type": "VIDEO",
+        "image_url": "/recent_works/eastparc.jpg",
+        "link_url": "https://www.youtube.com/watch?v=rlV2zi0rn24",
+        "title": "Staycation at Eastparc"
+    },
+    {
+        "type": "VIDEO",
+        "image_url": "/recent_works/wedding_invitation.jpg",
+        "link_url": "https://www.youtube.com/watch?v=IjxXAkjzk3I",
+        "title": "Wedding Invitation"
+    },
+    {
+        "type": "VIDEO",
+        "image_url": "/recent_works/rumta.jpg",
+        "link_url": "https://www.youtube.com/watch?v=DsbOE3P4s3U",
+        "title": "Promotion App"
+    },
+    {
+        "type": "VIDEO",
+        "image_url": "/recent_works/opening_meigivaa.jpg",
+        "link_url": "https://www.youtube.com/watch?v=8-9Ibda9hwM",
+        "title": "Youtube Opener"
+    },
+    {
+        "type": "VIDEO",
+        "image_url": "/recent_works/promo_app.jpg",
+        "link_url": "https://www.youtube.com/watch?v=XemTpbKgsa0",
+        "title": "Promotion App"
+    },
+    {
+        "type": "VIDEO",
+        "image_url": "/recent_works/londrio.jpg",
+        "link_url": "https://www.youtube.com/watch?v=Tz4Gdhrws9c",
+        "title": "Laundry App"
+    }
+]

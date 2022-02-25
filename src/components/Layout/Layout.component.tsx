@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BottomBar, SideBar } from '..';
 import AOS from 'aos';
 import styles from './Layout.component.module.scss';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { useWindowSize } from '../../utils';
 import Head from 'next/head';
 

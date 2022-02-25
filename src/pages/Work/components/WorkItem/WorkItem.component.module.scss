@@ -29,6 +29,23 @@
     transform: scale(1.01);
   }
 
+  .skeletonBg {
+    height: 100%;
+    z-index: 0;
+  }
+
+  .skeletonImg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: transparentize($color: $black, $amount: 0.9);
+    margin: auto;
+    z-index: 1;
+    font-size: 56px;
+  }
+
   @media #{$desktop} {
     &:hover {
       box-shadow: 0 8px 32px rgba($color: $black, $alpha: 0.5);

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { TitlePage } from '../../components';
 import { WorkItem, WorkTab } from './components';
 import { TabItem } from './constants';
+import recent_works from './entity/recent_works.json';
 import styles from './Work.page.module.scss';
 //#endregion
 
@@ -17,104 +18,47 @@ export const Work: React.FC = () => {
       <div className={styles.tabContent}>
         {active === TabItem.UID && (
           <>
-            <WorkItem
-              type={TabItem.UID}
-              src="/recent_works/jawilen.jpg"
-              title="Tour Guide App"
-            />
-            <WorkItem
-              type={TabItem.UID}
-              src="/recent_works/theking.jpg"
-              title="e Course Promo"
-            />
-            <WorkItem
-              type={TabItem.UID}
-              src="/recent_works/portfolio.jpg"
-              title="Portfolio"
-            />
-            <WorkItem
-              type={TabItem.UID}
-              src="/recent_works/jenius_app.jpg"
-              title="Jenius App"
-            />
-            <WorkItem
-              type={TabItem.UID}
-              src="/recent_works/rskia_sadewa.jpg"
-              title="RSKIA Sadewa"
-            />
-            <WorkItem
-              type={TabItem.UID}
-              src="/recent_works/restaurant.jpg"
-              title="Restaurant Portal"
-            />
+            {recent_works
+              .filter((v) => v.type === 'UID')
+              .map((item, index) => (
+                <WorkItem
+                  key={`uid-item-${index}`}
+                  type={TabItem.UID}
+                  src={item.image_url}
+                  title={item.title}
+                  link={item.link_url}
+                />
+              ))}
           </>
         )}
         {active === TabItem.UXE && (
           <>
-            <WorkItem
-              type={TabItem.UXE}
-              src="/recent_works/theking.jpg"
-              title="e Course Promo"
-            />
-            <WorkItem
-              type={TabItem.UXE}
-              src="/recent_works/portfolio.jpg"
-              title="Portfolio"
-            />
-            <WorkItem
-              type={TabItem.UXE}
-              src="/recent_works/edupower.jpg"
-              title="E-Learning"
-            />
-            <WorkItem
-              type={TabItem.UXE}
-              src="/recent_works/nvivo.jpg"
-              title="Nvivo Course"
-            />
-            <WorkItem
-              type={TabItem.UXE}
-              src="/recent_works/taman_pintar.jpg"
-              title="Taman Pintar YK"
-            />
-            <WorkItem
-              type={TabItem.UXE}
-              src="/recent_works/al_azhar.jpg"
-              title="Al Azhar YK"
-            />
+            {recent_works
+              .filter((v) => v.type === 'UXE')
+              .map((item, index) => (
+                <WorkItem
+                  key={`uxe-item-${index}`}
+                  type={TabItem.UXE}
+                  src={item.image_url}
+                  title={item.title}
+                  link={item.link_url}
+                />
+              ))}
           </>
         )}
         {active === TabItem.VIDEO && (
           <>
-            <WorkItem
-              type={TabItem.VIDEO}
-              src="/recent_works/eastparc.jpg"
-              title="Staycation at Eastparc"
-            />
-            <WorkItem
-              type={TabItem.VIDEO}
-              src="/recent_works/wedding_invitation.jpg"
-              title="Wedding Invitation"
-            />
-            <WorkItem
-              type={TabItem.VIDEO}
-              src="/recent_works/rumta.jpg"
-              title="Promotion App"
-            />
-            <WorkItem
-              type={TabItem.VIDEO}
-              src="/recent_works/opening_meigivaa.jpg"
-              title="Youtube Opener"
-            />
-            <WorkItem
-              type={TabItem.VIDEO}
-              src="/recent_works/promo_app.jpg"
-              title="Promotion App"
-            />
-            <WorkItem
-              type={TabItem.VIDEO}
-              src="/recent_works/londrio.jpg"
-              title="Laundry App"
-            />
+            {recent_works
+              .filter((v) => v.type === 'VIDEO')
+              .map((item, index) => (
+                <WorkItem
+                  key={`video-item-${index}`}
+                  type={TabItem.VIDEO}
+                  src={item.image_url}
+                  title={item.title}
+                  link={item.link_url}
+                />
+              ))}
           </>
         )}
       </div>
