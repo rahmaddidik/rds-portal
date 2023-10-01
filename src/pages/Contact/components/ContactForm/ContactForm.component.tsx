@@ -1,10 +1,37 @@
 //#region IMPORT
+import { useState } from 'react';
 import { Button } from '../../../../components';
 import styles from './ContactForm.component.module.scss';
 //#endregion
 
 //#region MAIN
 export const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const generateWhatsAppLink = () => {
+    const { name, email, subject, message } = formData;
+    const text = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+
+    // Replace '1234567890' with the recipient's WhatsApp number
+    const whatsappURL = `https://wa.me/82136116811/?text=${text}`;
+
+    window.open(whatsappURL);
+  };
+
   return (
     <div
       data-aos="fade-left"
@@ -19,6 +46,7 @@ export const ContactForm: React.FC = () => {
           placeholder="Your Name"
           className={styles.inputText}
           autoComplete="off"
+          onChange={handleChange}
         />
         <input
           name="email"
@@ -26,6 +54,7 @@ export const ContactForm: React.FC = () => {
           placeholder="Email"
           className={styles.inputText}
           autoComplete="off"
+          onChange={handleChange}
         />
       </div>
       <input
@@ -34,6 +63,7 @@ export const ContactForm: React.FC = () => {
         placeholder="Subject"
         className={styles.inputText}
         autoComplete="off"
+        onChange={handleChange}
       />
       <textarea
         name="message"
@@ -41,8 +71,13 @@ export const ContactForm: React.FC = () => {
         className={styles.inputTextarea}
         placeholder="Messages..."
         autoComplete="off"
+        onChange={handleChange}
       ></textarea>
-      <Button className={styles.action} text="Send Message" />
+      <Button
+        className={styles.action}
+        text="Send Message"
+        onClick={generateWhatsAppLink}
+      />
     </div>
   );
 };
